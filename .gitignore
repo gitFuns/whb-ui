@@ -16,4 +16,5 @@ es
 lib
 dist
 **/site-dist
+**/whb-ui
 changelog.generated.md
