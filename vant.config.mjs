@@ -1,5 +1,3 @@
-import svgLoader from "vite-svg-loader";
-
 export default {
   name: 'whb-ui',
   build: {
@@ -8,25 +6,6 @@ export default {
     },
     site: {
       publicPath: '/whb-ui/',
-    },
-    configureVite(config) {
-      config.server.port = 3000;
-
-      config.plugins.push(svgLoader({
-        defaultImport: "component",
-        svgoConfig: {
-          plugins: [
-            {
-              name: "removeAttrs",
-              params: {
-                attrs: "fill",
-              },
-            },
-          ],
-        },
-      }),);
-
-      return config;
     },
   },
   site: {
