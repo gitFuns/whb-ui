@@ -15,7 +15,7 @@
     "lint": "vant-cli lint",
     "test": "vant-cli test",
     "build": "vant-cli build",
-    "build:site": "rm -rf site-dist && vant-cli build-site && mv site-dist whb-ui",
+    "build:site": "rm -rf whb-ui && vant-cli build-site && mv site-dist whb-ui",
     "prepare": "husky install",
     "release": "vant-cli release --tag next",
     "release:site": "yarn build:site && npx gh-pages -d site-dist"
