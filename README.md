@@ -2,8 +2,8 @@
 
 #### 借这个项目掌握组件库的开发、部署 npm, 私服流程
 
--   [x] Button
--   [x] Icon
+-   Button
+-   Icon
 
 [文档地址](https://whbcloud.com/whb-ui)
 
