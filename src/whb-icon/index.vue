@@ -1,17 +1,24 @@
 <template>
   <component :is="iconComponent" class="svg-icon" v-bind="$attrs" />
 </template>
-<script setup>
-import { computed, defineAsyncComponent } from "vue";
 
-const props = defineProps({
-  name: {
-    type: String,
-    default: "",
+<script>
+import { defineAsyncComponent } from 'vue';
+
+export default {
+  name: 'WhbIcon',
+  props: {
+    name: {
+      type: String,
+      default: '',
+    },
   },
-});
-
-const iconComponent = computed(() => defineAsyncComponent(() => import(`./svg/${props.name}.svg`)));
+  computed: {
+    iconComponent() {
+      return defineAsyncComponent(() => import(`./svg/${this.name}.svg`));
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

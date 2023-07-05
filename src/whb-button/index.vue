@@ -1,17 +1,25 @@
 <template>
-  <button class="button" :class="props.type" @click="emit('click')">
+  <button class="button" :class="type" @click="emit('click')">
     <slot />
   </button>
 </template>
 
-<script setup>
-import { defineProps } from 'vue';
+<script>
+import { defineEmits } from 'vue';
 
-const props = defineProps({
-  type: String
-})
+const emit = defineEmits(['click']);
 
-const emit = defineEmits(['click'])
+export default {
+  name: 'WhbButton',
+  props: {
+    type: String,
+  },
+  setup() {
+    return {
+      emit,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
