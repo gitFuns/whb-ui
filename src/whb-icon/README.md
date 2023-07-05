@@ -7,10 +7,11 @@ WhbIcon 是一个示例按钮组件
 ### 引入
 
 ```js
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { WhbIcon } from 'whb-ui';
 
-Vue.use(WhbIcon);
+const app = createApp();
+app.use(WhbIcon);
 ```
 
 ## 代码演示

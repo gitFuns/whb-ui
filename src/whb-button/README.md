@@ -7,10 +7,11 @@ WhbButton 是一个示例按钮组件
 ### 引入
 
 ```js
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { WhbButton } from 'whb-ui';
 
-Vue.use(WhbButton);
+const app = createApp();
+app.use(WhbButton);
 ```
 
 ## 代码演示
