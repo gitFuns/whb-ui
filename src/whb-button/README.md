@@ -19,15 +19,15 @@ app.use(WhbButton);
 ### 基础用法
 
 ```html
-<whb-button @click="handleClick" />
+<whb-button style="margin-left: 15px">Default</whb-button>
 
-<whb-button type="success" @click="handleClick" />
+<whb-button type="success" style="margin-left: 15px">Success</whb-button>
 
-<whb-button type="info" @click="handleClick" />
+<whb-button type="info" style="margin-left: 15px">Info</whb-button>
 
-<whb-button type="danger" @click="handleClick" />
+<whb-button type="danger" style="margin-left: 15px">Danger</whb-button>
 
-<whb-button type="link" @click="handleClick" />
+<whb-button type="link" style="margin-left: 15px">Link</whb-button>
 ```
 
 ## API
