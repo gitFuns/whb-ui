@@ -33,7 +33,8 @@
     "@vant/cli": "^6.0.0",
     "sass": "^1.49.7",
     "vite-svg-loader": "^4.0.0",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vite-plugin-svg-icons": "^2.0.1"
   },
   "eslintConfig": {
     "root": true,

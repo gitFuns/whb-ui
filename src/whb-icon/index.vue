@@ -1,31 +1,35 @@
 <template>
-  <component :is="iconComponent" class="svg-icon" v-bind="$attrs" />
+  <svg fill="currentColor" :style="style">
+    <use :xlink:href="`#whbui-icon-${name}`"></use>
+  </svg>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue';
+import 'virtual:svg-icons-register';
 
 export default {
   name: 'WhbIcon',
   props: {
     name: {
       type: String,
-      default: '',
+      required: true,
+    },
+    width: {
+      type: [Number, String],
+      default: 16,
+    },
+    height: {
+      type: [Number, String],
+      default: 16,
     },
   },
   computed: {
-    iconComponent() {
-      return defineAsyncComponent(() => import(`./svg/${this.name}.svg`));
+    style() {
+      return {
+        width: `${this.width}px`,
+        height: `${this.height}px`,
+      };
     },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.svg-icon {
-  overflow: hidden;
-  outline: none;
-  fill: currentColor;
-  stroke-width: 0;
-}
-</style>

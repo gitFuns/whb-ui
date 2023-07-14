@@ -17,7 +17,7 @@ import WhbIcon from '../index.vue';
 </script>
 
 <style lang="scss">
-.svg-icon {
+svg {
   margin-left: 16px;
 }
 </style>
