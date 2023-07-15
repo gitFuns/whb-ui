@@ -1,11 +1,11 @@
 <template>
-  <svg fill="currentColor" :style="style">
-    <use :xlink:href="`#whbui-icon-${name}`"></use>
+  <svg fill="currentColor" class="whb-icon" :color="color" :width="width" :height="height">
+    <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
 
 <script>
-import 'virtual:svg-icons-register';
+import './icon-font.js';
 
 export default {
   name: 'WhbIcon',
@@ -13,6 +13,10 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    color: {
+      type: String,
+      default: '#131313',
     },
     width: {
       type: [Number, String],
@@ -23,13 +27,12 @@ export default {
       default: 16,
     },
   },
-  computed: {
-    style() {
-      return {
-        width: `${this.width}px`,
-        height: `${this.height}px`,
-      };
-    },
-  },
 };
 </script>
+
+<style lang="scss">
+.whb-icon {
+  fill: currentColor;
+  overflow: hidden;
+}
+</style>
