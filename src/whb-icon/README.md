@@ -19,11 +19,15 @@ app.use(WhbIcon);
 ### 基础用法
 
 ```html
-<whb-icon name="error" width="32" height="32" color="#c44749" />
+<whb-icon name="check-circle" width="32" height="32" color="#1a8f5c" />
 
-<whb-icon name="tick" width="32" height="32" color="#1a8f5c" />
+<whb-icon name="management" width="32" height="32" color="#e59940" />
 
-<whb-icon name="close" width="32" height="32" color="#131316" />
+<whb-icon name="member" width="32" height="32" color="#c44749" />
+
+<whb-icon name="close" width="32" height="32" color="#131313" />
+
+<whb-icon name="eye" width="32" height="32" color="#529b2e" />
 ```
 
 ## API
